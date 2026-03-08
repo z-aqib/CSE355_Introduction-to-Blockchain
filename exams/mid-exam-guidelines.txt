@@ -1,0 +1,192 @@
+this is what sir told us about the exam in messages after the last class,
+*Exam Structure Pattern and Topics*
+Dear Students,
+
+I have just finished making the mid term exam for Introduction to Blockchain course. I am feeling generous and I am sharing the weightage of the parts included in the exam.
+
+Conceptual/Short QA (20% spanning over 2 questions), Simulation/Numerical (68% spanning over 3 questions), and Objectives (12% spanning over 1 question). The final exam consists of a total of 6 questions spanning 9 pages.
+
+The paper has to be solved entirely on the question paper and no answer sheets will be required, I am also sharing the type of questions included in the exam.
+
+In one type of question(s), you will be asked to discuss certain concepts as to what they are and how they work. You will be asked about consequences of certain happenings. In another type of question you will be given sifficient information to simulate a certain technique. A type of question requires you to calculate certain values based on the given information and the reason about the output. In one last type of question you will be given a list of terms and you will have to fill a given partially filled table with those terms at appropriate positions.
+
+As an additional aid for you to prepare for the exam, I am including a list of topics in this post. The exam comprises of these topics only: Merkle Tree and Merkle Proof, Bitcoin transaction signature construction and verification, Bitcoin UTXO unlocking, Proof-of-work and Mining (target hash and nonce), UTXO Database, Transaction Fee and Rate, Bitcoin Transaction Types (P2PKH, P2MS, P2SH, P2WPKH, P2WSH, and P2TR).
+
+The order of these type of questions and topics is largely inspired by the actual order in which you will encounter these questions and topics if you were to attempt the final exam sequentially.
+
+I believe the above description covers all the question types and topics included in the exam. I hope this helps you in preparation for the exam.
+
+I wish all of you the best of luck.
+
+Regards
+Ahmed Akhtar
+make sure to bring your scientific calculator on exam day
+for now you can also practice using this PC simulator
+the activation key is all 0000...
+
+Scientific Calculator Allowed In Exam
+In the exam you should be able to do all calculations similar to the ones you did in HW1 using a scientific calculator
+https://www.youtube.com/watch?v=3VZIaS4Qzks
+
+This video shows the fool proof way to calculate mod using a scientific calculator that always works other methods sometimes work and sometimes do not work
+
+
+and this is what sir told us about the mid during the last class,
+ok so the exam topics sir told us in class were (im typing them from my lecture copy)
+diff types of transactions
+key and script locks detailed
+inputs kia signatures kahan kia
+script hash mein kia 
+version x and legacy, what is the diff
+script simulation
+steps for simulation of steps
+steps simulation se pehlay and doran
+script legacy step
+flowchart of signature kese kartay
+traditional signature mechanism - what is the difference with current signature mechanism
+traditional input output vs bitcoin input output what is the difference
+HW1 encryption and decryption
+simulation example
+bitcoin poori transaction process karna
+limbo game (difficult level of hash) har miner difficulty level compute karta hai so there will be a question on how they do it
+keyword nonce
+UTXO mein kia aata hai kab jaata hai
+simulation ka long q 
+
+this is what he told us like he was speaking so i rapidly wrote whatever he said so please try and make sense of it and give me a list of topics and explain each topic in a lot of detail and give questions and answers for each topic that could come
+
+i am also attaching homework 1 and all lectures slides afre attached so im also attaching quizzes and their solutions ok. use everything and just prepare me for the exam
+
+Homework 1 
+CS-355 (Spring 2026) 
+CSE-355  (Spring  2026) 
+Total Marks: 100 
+General Instructions 
+HW 01 
+Homework 1 
+Deadline: Feb 22, 2026 at 11:55pm 
+• There are a total of 10 questions and each question carries 10 marks. (some are easier 
+than the others and this has been done on purpose) 
+• This assignment must be completed and submitted individually. Group submissions 
+are NOT allowed 
+• Simply dividing questions among peers or sharing written solutions is strictly prohib- 
+ited and defeats the purpose of the assignment 
+• Every student is expected to develop a complete and independent understanding of 
+all questions 
+• You may use online resources, including Generative AI tools such as ChatGPT, 
+strictly for learning and clarification purposes. H owever, c opying s olutions, 
+generating answers without understanding them, or submitting AI-produced content 
+verbatim is considered academic misconduct 
+• If you have any confusion, please post your questions on the Whatsapp Group of the 
+course or contact the TA or the Instructor directly 
+Submission Instructions 
+• All solutions must be typed and submitted in PDF format. Handwritten 
+submissions will NOT be accepted under any circumstances. 
+• Typesetting your solutions in LaTeX is strongly encouraged and preferred. 
+However, you can also use MS Word or Google Docs, etc. 
+• Submissions must be  made  on  LMS  before  the  stated  deadline.  Email submissions 
+will NOT be accepted. The deadline will not be extended without imposing a penalty 
+for late submission. 
+• Each student must submit their own assignment individually. The first page must 
+clearly include your full name and student ID. 
+1 
+Homework 1 
+CS-355 (Spring 2026) 
+Question 1 
+Suppose Alice wants to send a confidential message to Bob. She does not want 
+anyone else to see what she sent. Alice also wants Bob to be sure it really came from 
+her. 
+How can we meet all the requirements? Explain by specifying all the actions taken 
+by both Alice and Bob. Feel free to simply draw a block diagram. 
+Question 2  
+Bob receives a message that claims to be signed by Alice. He tries to verify it using 
+Alice’s public key, but the verification fails. 
+a) What does this outcome mean? 
+b) Based on this, what possible issues or attacks should Bob suspect? 
+Question 3  
+a) Alice comes up with her own digital signature scheme. She writes a message and 
+encrypts that message using her Private key. She then sends this message and the 
+encrypted message both to Bob. Can Bob be sure that this message came from Alice? 
+b) Alice modifies this scheme. She writes a message and encrypts that with her private 
+key (as in the previous part). She then hashes the encrypted message and sends this 
+hash along with the original message to Bob. Can Bob be sure that this message is 
+from Alice? 
+Question 4 
+In class we learnt that a symmetric key is often used for communication in-bulk i.e., 
+when there is a lot of data that must be transferred. This is done because symmetric 
+keys operate a lot faster than asymmetric keys. 
+a) Assume that Alice and Bob share a secret, symmetric key. Devise a scheme with 
+which Alice can send a plain-text message to Bob and ensure that Bob can verify the 
+authenticity of this message. 
+Assume that Alice and Bob must share a LOT of data and asymmetric keys are not viable. 
+b) Consider a scenario in which Alice wishes to relay to Bob the message “Give me 
+3.50$”. A malicious actor,  Kevin,  duplicates this message and sends it twice to Bob 
+(this is called a replay attack). According to the scheme you devised in the previous 
+part, what will the outcome be? Further, devise a scheme in which duplicated messages 
+are rejected. 
+Question 5 
+In a Bitcoin blockchain, a transaction claims “Alice pays 0.3 BTC to Bob.” 
+a) What checks must be performed on Alice’s digital signature before this transaction 
+is considered valid? 
+b) Could Alice later deny sending it? Why or why not? 
+2 
+Homework 1 
+CS-355 (Spring 2026) 
+Question 6 
+Consider a blockchain with three blocks. Block 1 contains transactions and has a 
+hash H1 = ABC123. Block 2 contains its own transactions and includes H1 in its data 
+before being hashed to produce H2 = DEF456. Block 3 does the same, resulting in H3 
+= GHI789. 
+a) If a transaction in Block 1 is altered, explain why merely recalculating its hash to 
+H1’ is insufficient to hide the tampering. 
+b) What must an attacker do to make the altered chain appear valid to a node 
+synchronizing from the latest block? Why does Proof-of-Work make this practically 
+very difficult? 
+Question 7  
+Consider as simple encryption procedure using a public/private key pair. You have the 
+public key as the integer p=7 and the “secret” private key as the integer s=3. 
+The method to encrypt an integer m is: c = mp mod 33 
+And the method to decrypt an encrypted integer is: m = cs mod 33 
+Assume that the input characters have the following numerical values: 
+a/A = 0, b/B = 1, c/C = 2, ..., z/Z = 25. 
+a) Encrypt the word ‘SurpriseQuiz’ and write down the sequence of numbers. 
+b) Decrypt the sequence “1 2 13 29 20 2 7 20 21 16 8 16 13 28”. Write down the 
+characters and what you think of them. 
+Now lets consider a hashing function h(x) = ⌊ex + 100⌋ mod 32 where x ∈ [0, 50]. 
+As h(x) is defined only for one input, we will modify it to take in lists of numbers such 
+as “31 23 4 2 13”. We define that h(31 23 4 2 13) will be h((31 + 23 + 4 + 2 + 13) mod 
+50). The idea is that every number in the list makes a contribution. Suppose Alice has 
+the public key p = 7 and private key s = 3. Data is sent in the form “m1m2m3...mn
+ 
+sig” where the mi
+ are numbers from the message and “sig” is the private key 
+(encryption) of the hash of the message. Note that this is different from the previous 
+parts. 
+c) Suppose Alice wants to transmit the word “SaveMe”. What is the final message that 
+Alice transmits? 
+d) You receive a message “12 20 18 19 0 5 0 17 14 2 10 18 1 0 2 7 4 18 7 14 2 10 18 5”. 
+It is known that the scheme in part (c) is used. Is this message from Alice?  Why or 
+why not? If it is a message from Alice then write the message. 
+Question 8 
+a) What is the fundamental difference between Symmetric and Asymmetric (Public 
+Key) cryptography? 
+b) For the following goals, state whether symmetric or asymmetric cryptography is 
+typically used. Also state your reasoning: - i) Encrypting a large file for storage. - ii) 
+Proving your identity to a website. - iii) Establishing a secure connection to your bank’s 
+server. 
+3 
+Homework 1 
+CS-355 (Spring 2026) 
+Question 9 
+A simple hash function is defined as H(x) = (5x + 3) mod 16. 
+a) Calculate the hash of the following numbers: H(7), H(23), H(39). 
+b) What do you observe about the results for H(7) and H(23)? Explain why this 
+happens, relating it to the properties of the modulo operation. 
+c) Based on this, what is a major weakness of this hash function? 
+Question 10 
+We briefly talked about Proof-of-Stake (PoS) as an alternative to Proof-of-Work (PoW). 
+a) In PoW, miners expend energy. What do validators in a PoS system “stake” or 
+put at risk to participate in block creation? 
+b) Read up on the advantages and criticisms of PoS systems, and mention one for each 
+here.  
+4  
