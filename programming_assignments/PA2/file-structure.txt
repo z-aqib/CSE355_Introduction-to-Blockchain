@@ -31,6 +31,7 @@ PA2/
 ├── .gitignore
 ├── banking_xxxxx_contract.sol
 ├── CSE355_Spring26_PA2.pdf
+├── file-structure.txt
 ├── grader.py
 ├── hardhat.config.js
 ├── PA1_zuha_aqib_26106.docx
@@ -38,5 +39,4 @@ PA2/
 ├── package-lock.json
 ├── package.json
 ├── README.md
-├── structure-maker.py
-└── ~$1_zuha_aqib_26106.docx
+└── structure-maker.py

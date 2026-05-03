@@ -63,7 +63,7 @@ def main():
     root = Path(".").resolve()
     print(f"Generating beautiful tree for: {root}")
     lines = [f"{root.name}/"] + build_tree(root, "", DEFAULT_IGNORES)
-    output_path = root / "structure.txt"
+    output_path = root / "file-structure.txt"
     output_path.write_text("\n".join(lines), encoding="utf-8")
     print(f"Tree written to: {output_path}")
 
