@@ -1,0 +1,42 @@
+PA2/
+├── artifacts
+│   ├── build-info
+│   │   └── 0ea17c13285d266a3e82d28ed187260f.json
+│   └── contracts
+│       ├── banking_26106_contract.sol
+│       │   ├── BankingSystem.dbg.json
+│       │   └── BankingSystem.json
+│       └── Lock.sol
+│           ├── Lock.dbg.json
+│           └── Lock.json
+├── cache
+│   └── solidity-files-cache.json
+├── contracts
+│   ├── banking_26106_contract.sol
+│   └── Lock.sol
+├── ignition
+│   └── modules
+│       └── Lock.js
+├── Solidity Test Files
+│   ├── banking_test.sol
+│   ├── exceptions_test.sol
+│   ├── interest_test.sol
+│   └── owner_test.sol
+├── test
+│   ├── banking_test.js
+│   ├── exceptions_test.js
+│   ├── interest_test.js
+│   ├── Lock.js
+│   └── owner_test.js
+├── .gitignore
+├── banking_xxxxx_contract.sol
+├── CSE355_Spring26_PA2.pdf
+├── grader.py
+├── hardhat.config.js
+├── PA1_zuha_aqib_26106.docx
+├── PA1_zuha_aqib_26106.pdf
+├── package-lock.json
+├── package.json
+├── README.md
+├── structure-maker.py
+└── ~$1_zuha_aqib_26106.docx
