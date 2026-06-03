@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "fs-extra": "^11.3.5",
     "solc": "^0.8.35",
     "web3": "^1.10.4"
   }
