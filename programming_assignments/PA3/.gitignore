@@ -36,8 +36,6 @@ scriptSetupV2/node-v16.13.0-linux-x64/
 **/transactions.rlp
 **/nodekey
 **/keystore/
-**/LOCK
-**/FLOCK
 
 
 # ----------------
