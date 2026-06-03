@@ -32,7 +32,6 @@ scriptSetupV2/node-v16.13.0-linux-x64/
 # ----------------
 **/chaindata/
 **/lightchaindata/
-**/triecache/
 
 
 # ----------------
