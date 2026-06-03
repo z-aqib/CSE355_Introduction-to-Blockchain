@@ -1,0 +1,70 @@
+# ================================
+# PA3 Git Ignore
+# Conservative version:
+# Keeps assignment files and source code.
+# Ignores only generated/heavy/runtime/installable files.
+# ================================
+
+
+# ----------------
+# Nested Git metadata
+# ----------------
+# Do not push Git histories inside this Git repo.
+**/.git/
+.git/
+**/.git/**
+
+
+# ----------------
+# Node dependencies
+# ----------------
+**/node_modules/
+
+
+# ----------------
+# Downloaded portable Node binary
+# ----------------
+scriptSetupV2/node-v16.13.0-linux-x64/
+
+
+# ----------------
+# Blockchain generated data
+# ----------------
+**/chaindata/
+**/lightchaindata/
+**/triecache/
+**/transactions.rlp
+**/nodekey
+**/keystore/
+**/LOCK
+**/FLOCK
+**/*.ldb
+**/*.ridx
+**/*.cdat
+**/*.cidx
+**/*.rdat
+
+
+# ----------------
+# Logs and output files
+# ----------------
+*.log
+*.out
+nohup.out
+output.log
+
+
+# ----------------
+# OS/editor junk
+# ----------------
+.DS_Store
+.vscode/
+.idea/
+
+
+# ----------------
+# Environment/secrets
+# ----------------
+.env
+.env.*
+!.env.example
