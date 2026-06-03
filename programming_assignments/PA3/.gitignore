@@ -28,12 +28,6 @@ scriptSetupV2/node-v16.13.0-linux-x64/
 
 
 # ----------------
-# Blockchain generated data
-# ----------------
-**/chaindata/
-
-
-# ----------------
 # Environment/secrets
 # ----------------
 .env
