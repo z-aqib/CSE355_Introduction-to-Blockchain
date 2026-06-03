@@ -38,11 +38,6 @@ scriptSetupV2/node-v16.13.0-linux-x64/
 **/keystore/
 **/LOCK
 **/FLOCK
-**/*.ldb
-**/*.ridx
-**/*.cdat
-**/*.cidx
-**/*.rdat
 
 
 # ----------------
