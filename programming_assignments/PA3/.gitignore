@@ -49,9 +49,6 @@ scriptSetupV2/node-v16.13.0-linux-x64/
 # Logs and output files
 # ----------------
 *.log
-*.out
-nohup.out
-output.log
 
 
 # ----------------

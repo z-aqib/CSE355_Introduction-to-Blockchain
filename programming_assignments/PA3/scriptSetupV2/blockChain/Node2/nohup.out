@@ -1,0 +1,68 @@
+INFO [06-01|07:20:58.726] Running with private transaction manager disabled - quorum private transactions will not be supported 
+INFO [06-01|07:20:58.780] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [06-01|07:20:58.803] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
+WARN [06-01|07:20:58.819] Using deprecated resource file /home/osboxes/ITB/PA3/scriptSetupV2/blockChain/Node2/data/nodekey, please move this file to the 'geth' subdirectory of datadir. 
+WARN [06-01|07:20:58.821] Found deprecated node list file /home/osboxes/ITB/PA3/scriptSetupV2/blockChain/Node2/data/static-nodes.json, please use the TOML config file instead. 
+WARN [06-01|07:20:58.844] Sanitizing cache to Go's GC limits       provided=1024 updated=656
+WARN [06-01|07:20:58.845] WARNING: The flag --istanbul.blockperiod is deprecated and will be removed in the future, please use ibft.blockperiodseconds on genesis file 
+INFO [06-01|07:20:58.845] Enabling recording of key preimages since archive mode is used 
+INFO [06-01|07:20:58.845] Set global gas cap                       cap=25,000,000
+INFO [06-01|07:20:58.845] Running with private transaction manager disabled - quorum private transactions will not be supported 
+INFO [06-01|07:20:58.845] Allocated trie memory caches             clean=98.00MiB dirty=164.00MiB
+INFO [06-01|07:20:58.845] Allocated cache and file handles         database=/home/osboxes/ITB/PA3/scriptSetupV2/blockChain/Node2/data/geth/chaindata cache=328.00MiB handles=524,288
+INFO [06-01|07:20:58.959] Opened ancient database                  database=/home/osboxes/ITB/PA3/scriptSetupV2/blockChain/Node2/data/geth/chaindata/ancient readonly=false
+INFO [06-01|07:20:58.972] Initialised chain configuration          config="{ChainID: 10 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 IsQuorum: true Constantinople: 0 TransactionSizeLimit: 64 MaxCodeSize: 0 Petersburg: 0 Istanbul: 0, Muir Glacier: <nil>, Berlin: <nil>  Catalyst: <nil> YOLO v3: <nil> PrivacyEnhancements: <nil> PrivacyPrecompile: <nil> EnableGasPriceBlock: <nil> Engine: istanbul}"
+WARN [06-01|07:20:58.987] WARNING: The attribute config.istanbul is deprecated and will be removed in the future, please use config.ibft on genesis file 
+INFO [06-01|07:20:58.988] Initialising Ethereum protocol           network=10 dbversion=8
+INFO [06-01|07:20:58.988] Initialising Quorum consensus protocol   name=istanbul versions="[100 99 64]" network=10 dbversion=8
+INFO [06-01|07:20:58.998] Using SegregatedCacheProvider. 
+INFO [06-01|07:20:59.009] Loaded most recent local header          number=477 hash=9b6579..ddb5dc td=478 age=12m38s
+INFO [06-01|07:20:59.009] Loaded most recent local full block      number=477 hash=9b6579..ddb5dc td=478 age=12m38s
+INFO [06-01|07:20:59.010] Loaded most recent local fast block      number=477 hash=9b6579..ddb5dc td=478 age=12m38s
+INFO [06-01|07:21:00.320] Loaded local transaction journal         transactions=0 dropped=0
+INFO [06-01|07:21:00.320] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [06-01|07:21:00.353] Unclean shutdown detected                booted=2026-06-01T06:27:12-0400 age=53m48s
+WARN [06-01|07:21:00.353] permission-config.json file is missing. Smart-contract-based permission service will be disabled error="stat data/permission-config.json: no such file or directory"
+INFO [06-01|07:21:00.353] No plugins to initialise 
+INFO [06-01|07:21:00.353] Starting peer-to-peer node               instance=Geth/v1.10.3-stable(quorum-v24.4.1)/linux-amd64/go1.22.2
+INFO [06-01|07:21:00.554] New local node record                    seq=7 id=29468f3c50f56749 ip=127.0.0.1 udp=0 tcp=33002
+INFO [06-01|07:21:00.554] Started P2P networking                   self="enode://3b36336e14c2b499f09433d579543538a5b33ba3bede0208205b5784caf015fd80956572d64a8d4a93c0d6de8b50c2e3bf661fe461e8ed643cd996f02c051f69@127.0.0.1:33002?discport=0"
+INFO [06-01|07:21:00.568] IPC endpoint opened                      url=/home/osboxes/ITB/PA3/scriptSetupV2/blockChain/Node2/data/geth.ipc isMultitenant=false
+INFO [06-01|07:21:00.568] Security Plugin is not enabled 
+INFO [06-01|07:21:00.569] Security: TLS not enabled                endpoint=127.0.0.1:22002 reason="no TLSConfigurationSource found"
+INFO [06-01|07:21:00.569] HTTP server started                      endpoint=127.0.0.1:22002 prefix= cors= vhosts=localhost isTls=false
+INFO [06-01|07:21:00.588] Transaction pool price threshold not updated as gasPrice is not enabled 
+INFO [06-01|07:21:00.588] Transaction pool price threshold not updated as gasPrice is not enabled 
+INFO [06-01|07:21:00.588] start IBFT 
+INFO [06-01|07:21:00.588] BFT: activate IBFT 
+INFO [06-01|07:21:00.589] Commit new mining work                   number=478 sealhash=32aa64..bd9c59 uncles=0 txs=0 gas=0 fees=0 elapsed="164.541µs"
+WARN [06-01|07:21:00.673] full p2p peer                            id=3656f454b74e16b0bb4bd881be482921f1d0fad58a901f93e3c3c0255a1995fd ethPeer="Peer 3656f454b74e16b0 127.0.0.1:33001"
+WARN [06-01|07:21:00.686] full p2p peer                            id=1d7a2ac87acf86282c07bd9ec39ea604c89958e3def600c555c5680558592517 ethPeer="Peer 1d7a2ac87acf8628 127.0.0.1:33000"
+WARN [06-01|07:21:00.857] full p2p peer                            id=fb88ca2cab9a3a38c887c3fd1541824baa353f55d5bd91c86622f7b7d97af64c ethPeer="Peer fb88ca2cab9a3a38 127.0.0.1:42008"
+INFO [06-01|07:21:00.934] BFT: block proposal committed            author=0xc9d2a1FEFB4cCF5B14e656e545f508bC3Ac6e507 hash=a951ee..34392a number=478
+INFO [06-01|07:21:00.965] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=21.425ms    mgasps=0.000 number=478 hash=a951ee..34392a dirty=0.00B
+INFO [06-01|07:21:00.976] Commit new mining work                   number=479 sealhash=d9434f..eb15d5 uncles=0 txs=0 gas=0 fees=0 elapsed=10.469ms
+WARN [06-01|07:21:01.053] full p2p peer                            id=6bd585d29649d4372fb61bd5f3bb00b9413bee260dcc04178a4045aac3c692b0 ethPeer="Peer 6bd585d29649d437 127.0.0.1:42016"
+WARN [06-01|07:21:02.397] full p2p peer                            id=b0325913b389d0aed3a90863a5d2a45b2dab9e81e33cebe5462d73a236f5d1e5 ethPeer="Peer b0325913b389d0ae 127.0.0.1:60512"
+INFO [06-01|07:21:05.086] BFT: block proposal committed            author=0xc9d2a1FEFB4cCF5B14e656e545f508bC3Ac6e507 hash=18ea7e..942218 number=479
+INFO [06-01|07:21:05.135] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=18.371ms    mgasps=0.000 number=479 hash=18ea7e..942218 dirty=0.00B
+INFO [06-01|07:21:05.136] Commit new mining work                   number=480 sealhash=1cfdb0..1a3993 uncles=0 txs=0 gas=0 fees=0 elapsed="304.717µs"
+INFO [06-01|07:21:05.662] Got interrupt, shutting down... 
+INFO [06-01|07:21:05.662] HTTP server stopped                      endpoint=127.0.0.1:22002
+INFO [06-01|07:21:05.662] IPC endpoint closed                      url=/home/osboxes/ITB/PA3/scriptSetupV2/blockChain/Node2/data/geth.ipc
+INFO [06-01|07:21:05.662] Stopping all plugins                     count=0
+INFO [06-01|07:21:05.662] All plugins stopped                      errors=[]
+INFO [06-01|07:21:05.663] Ethereum protocol stopped 
+INFO [06-01|07:21:05.669] Transaction pool stopped 
+INFO [06-01|07:21:05.677] BFT: deactivate 
+INFO [06-01|07:21:05.677] Writing cached state to disk             block=479 hash=18ea7e..942218 root=2200d4..828fd6
+INFO [06-01|07:21:05.677] Persisted trie from memory database      nodes=0 size=0.00B time="2.25µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [06-01|07:21:05.677] Writing cached state to disk             block=478 hash=a951ee..34392a root=2200d4..828fd6
+INFO [06-01|07:21:05.677] Persisted trie from memory database      nodes=0 size=0.00B time=989ns    gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [06-01|07:21:05.679] Writing cached state to disk             block=352 hash=d373d9..2edf1f root=2200d4..828fd6
+INFO [06-01|07:21:05.679] Persisted trie from memory database      nodes=0 size=0.00B time="1.987µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [06-01|07:21:05.679] Writing snapshot state to disk           root=2200d4..828fd6
+INFO [06-01|07:21:05.679] Persisted trie from memory database      nodes=0 size=0.00B time="1.418µs" gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [06-01|07:21:05.679] Writing clean trie cache to disk         path=/home/osboxes/ITB/PA3/scriptSetupV2/blockChain/Node2/data/geth/triecache threads=1
+INFO [06-01|07:21:05.689] Persisted the clean trie cache           path=/home/osboxes/ITB/PA3/scriptSetupV2/blockChain/Node2/data/geth/triecache elapsed=9.857ms
+INFO [06-01|07:21:05.689] Blockchain stopped 
