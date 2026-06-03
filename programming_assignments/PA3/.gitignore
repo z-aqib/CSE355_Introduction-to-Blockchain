@@ -7,24 +7,9 @@
 
 
 # ----------------
-# Nested Git metadata
-# ----------------
-# Do not push Git histories inside this Git repo.
-**/.git/
-.git/
-**/.git/**
-
-
-# ----------------
 # Node dependencies
 # ----------------
 **/node_modules/
-
-
-# ----------------
-# Downloaded portable Node binary
-# ----------------
-scriptSetupV2/node-v16.13.0-linux-x64/
 
 
 # ----------------
