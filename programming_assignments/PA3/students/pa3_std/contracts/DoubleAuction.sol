@@ -1,100 +1,121 @@
 // SPDX-License-Identifier: HF
 pragma solidity ^0.8.1;
 
-contract DoubleAuction 
-{
-    uint private constant MAX_SIZE = 20;
-    uint private constant AUCTION_INTERVAL = 30;
-
+contract DoubleAuction {
     struct Bid {
-        address bidder;
-        uint quantity;
-        uint price;
+        address user;
+        uint q;
+        uint v;
     }
 
-    Bid[] private buyers;
-    Bid[] private sellers;
+    Bid[] buyers;
+    Bid[] sellers;
 
-    address[] private resultSellers;
-    address[] private resultBuyers;
-    uint[] private resultPrices;
-    uint[] private resultQuantities;
+    address[] resultSellers;
+    address[] resultBuyers;
+    uint[] resultPrices;
+    uint[] resultQuantities;
 
-    mapping(address => bool) private alreadyBid;
-    address[] private intervalBidders;
+    mapping(address => bool) used;
+    address[] usedList;
 
-    uint private lastAuctionTime;
-    bool private auctionHasRun;
+    uint lastAuctionTime;
+    bool auctionRan;
 
     constructor(uint initVal) {
         initVal;
     }
 
-    function addBuyer(uint quantity, uint price) public {
-        require(quantity > 0);
-        require(price > 0);
-        require(buyers.length < MAX_SIZE);
-        require(!alreadyBid[msg.sender]);
+    function addBuyer(uint quantity, uint value) public {
+        require(!used[msg.sender]);
+        require(quantity > 0 && value > 0);
 
-        buyers.push(Bid(msg.sender, quantity, price));
-        alreadyBid[msg.sender] = true;
-        intervalBidders.push(msg.sender);
+        buyers.push(Bid(msg.sender, quantity, value));
+        used[msg.sender] = true;
+        usedList.push(msg.sender);
     }
 
-    function addSeller(uint quantity, uint price) public {
-        require(quantity > 0);
-        require(price > 0);
-        require(sellers.length < MAX_SIZE);
-        require(!alreadyBid[msg.sender]);
+    function addSeller(uint quantity, uint value) public {
+        require(!used[msg.sender]);
+        require(quantity > 0 && value > 0);
 
-        sellers.push(Bid(msg.sender, quantity, price));
-        alreadyBid[msg.sender] = true;
-        intervalBidders.push(msg.sender);
+        sellers.push(Bid(msg.sender, quantity, value));
+        used[msg.sender] = true;
+        usedList.push(msg.sender);
     }
 
     function doubleAuction() public {
-        require(!auctionHasRun || block.timestamp >= lastAuctionTime + AUCTION_INTERVAL);
+        require(!auctionRan || block.timestamp >= lastAuctionTime + 30);
 
         delete resultSellers;
         delete resultBuyers;
         delete resultPrices;
         delete resultQuantities;
 
-        sortSellers();
-        sortBuyers();
+        uint i;
+        uint j;
 
-        uint len = buyers.length < sellers.length ? buyers.length : sellers.length;
-        uint matchCount = 0;
+        for (i = 0; i < sellers.length; i++) {
+            for (j = i + 1; j < sellers.length; j++) {
+                if (sellers[j].v < sellers[i].v) {
+                    Bid memory tempS = sellers[i];
+                    sellers[i] = sellers[j];
+                    sellers[j] = tempS;
+                }
+            }
+        }
 
-        for (uint i = 0; i < len; i++) {
-            if (buyers[i].price >= sellers[i].price) {
-                matchCount++;
+        for (i = 0; i < buyers.length; i++) {
+            for (j = i + 1; j < buyers.length; j++) {
+                if (buyers[j].v > buyers[i].v) {
+                    Bid memory tempB = buyers[i];
+                    buyers[i] = buyers[j];
+                    buyers[j] = tempB;
+                }
+            }
+        }
+
+        uint n = buyers.length;
+        if (sellers.length < n) {
+            n = sellers.length;
+        }
+
+        uint k = 0;
+
+        for (i = 0; i < n; i++) {
+            if (buyers[i].v >= sellers[i].v) {
+                k++;
             } else {
                 break;
             }
         }
 
-        if (matchCount > 0) {
-            uint k = matchCount - 1;
-            uint clearingPrice = (buyers[k].price + sellers[k].price) / 2;
+        if (k > 0) {
+            uint price = (buyers[k - 1].v + sellers[k - 1].v) / 2;
 
-            for (uint i = 0; i < matchCount; i++) {
-                resultSellers.push(sellers[i].bidder);
-                resultBuyers.push(buyers[i].bidder);
-                resultPrices.push(clearingPrice);
+            for (i = 0; i < k; i++) {
+                resultSellers.push(sellers[i].user);
+                resultBuyers.push(buyers[i].user);
+                resultPrices.push(price);
 
-                if (buyers[i].quantity < sellers[i].quantity) {
-                    resultQuantities.push(buyers[i].quantity);
+                if (buyers[i].q < sellers[i].q) {
+                    resultQuantities.push(buyers[i].q);
                 } else {
-                    resultQuantities.push(sellers[i].quantity);
+                    resultQuantities.push(sellers[i].q);
                 }
             }
         }
 
-        lastAuctionTime = block.timestamp;
-        auctionHasRun = true;
+        for (i = 0; i < usedList.length; i++) {
+            used[usedList[i]] = false;
+        }
 
-        clearBids();
+        delete usedList;
+        delete buyers;
+        delete sellers;
+
+        lastAuctionTime = block.timestamp;
+        auctionRan = true;
     }
 
     function getResults()
@@ -108,40 +129,5 @@ contract DoubleAuction
         )
     {
         return (resultSellers, resultBuyers, resultPrices, resultQuantities);
-    }
-
-    function sortSellers() private {
-        for (uint i = 0; i < sellers.length; i++) {
-            for (uint j = i + 1; j < sellers.length; j++) {
-                if (sellers[j].price < sellers[i].price) {
-                    Bid memory temp = sellers[i];
-                    sellers[i] = sellers[j];
-                    sellers[j] = temp;
-                }
-            }
-        }
-    }
-
-    function sortBuyers() private {
-        for (uint i = 0; i < buyers.length; i++) {
-            for (uint j = i + 1; j < buyers.length; j++) {
-                if (buyers[j].price > buyers[i].price) {
-                    Bid memory temp = buyers[i];
-                    buyers[i] = buyers[j];
-                    buyers[j] = temp;
-                }
-            }
-        }
-    }
-
-    function clearBids() private {
-        delete buyers;
-        delete sellers;
-
-        for (uint i = 0; i < intervalBidders.length; i++) {
-            alreadyBid[intervalBidders[i]] = false;
-        }
-
-        delete intervalBidders;
     }
 }
