@@ -1,0 +1,8 @@
+=============== Jun 1, 2026 (EDT) ===============
+06:27:09.621515 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+06:27:09.624756 db@open opening
+06:27:09.624919 version@stat F·[] S·0B[] Sc·[]
+06:27:09.625841 db@janitor F·2 G·0
+06:27:09.625852 db@open done T·1.085057ms
+06:27:09.629539 db@close closing
+06:27:09.629583 db@close done T·42.865µs
