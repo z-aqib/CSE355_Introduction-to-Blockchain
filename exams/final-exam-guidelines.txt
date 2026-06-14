@@ -1,0 +1,47 @@
+*Final Exam Structure Pattern and Topics*
+
+Dear Students,
+
+I have just finished making the final exam for the Introduction to Blockchain course. I am feeling generous and I am sharing the weightage of the parts included in the exam.
+
+The final exam consists of a total of 9 questions spanning 17 pages. Short QA (3% spanning over 1 question), Simulation/Numerical/Coding (53% spanning over 4 questions), and Conceptual (44% spanning over 4 questions). 
+
+The paper has to be solved entirely on the question paper and no answer sheets will be required, I am also sharing the type of questions included in the exam.
+
+In one type of question, you may be required to briefly explain why a certain technique or mechanism has been applied, what benefit it provides, or why it does not create a problem. In another type of question you will be given sufficient information to calculate some required values. You will be given a scenario and you will be required to reason about things that could happen and you will be asked to suggest actions. You will be asked to discuss why the suggested way is better. In a type of question you will be asked how a certain problem was dealt or is dealt with in a certain framework. There is a question in which you are given different ways to use something and you have to discuss the benefits of each of the given ways. In one question you will given information and you will be asked to construct certain structures correctly. In another one you will be asked to discuss certain concepts as to what they are and how they work. You will be asked to contrast between two different techniques. You will be given a code and you will be asked to analyze and fix it. You will be given a way to do something and then in a scenario you will be told that it fails and you will have to identify why it fails and suggest the fix and discuss why the fix works and is better than the original.
+
+As an additional aid for you to prepare for the exam, I am including a list of topics (along with the week number so you can find it in the slides) in this post. The exam comprises of these topics only: Digital Signature Verification (general in week 3 and Bitcoin specific in week 5), timelocks (week 9), Lightning Payment Channels, Revocation and Lightning Network (week 8 and 9), Ethereum Gas, Turing Completeness and Transaction Nonce (week 11), Ethereum State Trie (Modified Merkle Patricia Trie) (week 12), Proof of Work and Proof of Stake (week 12), Stablecoins [Currency backed, asset backed, cryptocurrency backed, algorithmic, and private institutional] (week 13), smart contract vulnerabilities (week 14), and ERC-20 Limitations (week 14).
+
+The order of these type of questions and topics is largely inspired by the actual order in which you will encounter these questions and topics if you were to attempt the final exam sequentially.
+
+I believe the above description covers all the question types and topics included in the exam. I hope this helps you in preparation for the exam.
+
+I wish all of you the best of luck.
+
+Regards
+Ahmed Akhtar
+
+he also said:
+Abhi k liye important lectures are week 11, 12, 13 and 14
+More than 70% is from them
+
+he also sent the exam instructions:
+**CSE-355 Introduction to Blockchain (Spring ’26)**
+**Final Examination**
+**Instructor: Ahmed Akhtar**
+
+**Max Marks: 100**
+**Time Allowed: 3 hours**
+
+---
+
+## Instructions:
+
+• We will only grade what is written in the space provided below each question
+• Make sure to write your name and ERP on each page
+• Extra sheets may be used for rough work but make sure to write your name and ERP on them. Answers on extra sheets will not be graded
+• Understanding the questions is part of the exam; please do not ask for clarifications during the exam
+• In this exam, 1k means 1000 and not 1024. Similarly, 1M means 10⁶. Capital ‘B’ is used for bytes, while small ‘b’ is used for bits. Therefore, 1kb is 1000 bits, and 4MB is 4×10⁶ bytes
+• Only writing or copying formulas without appropriate final numerical calculations will not earn you any credit
+• It is okay to leave the trivial steps and write the important ones. However, writing just the incorrect final answer will not earn you any partial credit
+• Make sure you have all 17 pages (printed on 9 two-sided sheets) of the exam before you begin
